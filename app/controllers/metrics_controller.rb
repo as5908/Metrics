@@ -24,7 +24,6 @@ class MetricsController < ApplicationController
   # GET /metrics/new.json
   def new
     @metric = Metric.new
-
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @metric }
