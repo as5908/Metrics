@@ -1,0 +1,41 @@
+<%= form_for(@metric) do |f| %>
+  <% if @metric.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@metric.errors.count, "error") %> prohibited this metric from being saved:</h2>
+
+      <ul>
+      <% @metric.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Status_id %><br />
+    <%= f.text_field :Status_id %>
+  </div>
+  <div class="field">
+    <%= f.label :Text %><br />
+    <%= f.text_field :Text %>
+  </div>
+  <div class="field">
+    <%= f.label :Accounts_Used %><br />
+    <%= f.text_field :Accounts_Used %>
+  </div>
+  <div class="field">
+    <%= f.label :Followers_Count %><br />
+    <%= f.text_field :Followers_Count %>
+  </div>
+  <div class="field">
+    <%= f.label :Time %><br />
+    <%= f.text_field :Time %>
+  </div>
+  <div class="field">
+    <%= f.label :Failures %><br />
+    <%= f.number_field :Failures %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  Status_id: MyString
+  Text: MyString
+  Accounts_Used: MyString
+  Followers_Count: MyString
+  Time: MyString
+  Failures: 1
+
+two:
+  Status_id: MyString
+  Text: MyString
+  Accounts_Used: MyString
+  Followers_Count: MyString
+  Time: MyString
+  Failures: 1

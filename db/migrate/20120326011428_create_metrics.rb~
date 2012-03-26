@@ -1,0 +1,14 @@
+class CreateMetrics < ActiveRecord::Migration
+  def change
+    create_table :metrics do |t|
+      t.bigint :Tweet_id
+      t.string :Tweet_text
+      t.integer :Number_of_retweets
+      t.integer :Receivers
+      t.decimal :time
+      t.integer :Failed_attempts
+
+      t.timestamps
+    end
+  end
+end

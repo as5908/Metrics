@@ -1,0 +1,14 @@
+class CreateMetrics < ActiveRecord::Migration
+  def change
+    create_table :metrics do |t|
+      t.bigint :Status_id
+      t.text :Text
+      t.bigint :Accounts_Used
+      t.bigint :Followers_Count
+      t.bigint :Time
+      t.integer :Failures
+
+      t.timestamps
+    end
+  end
+end

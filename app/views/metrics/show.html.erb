@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Status:</b>
+  <%= @metric.Status_id %>
+</p>
+
+<p>
+  <b>Text:</b>
+  <%= @metric.Text %>
+</p>
+
+<p>
+  <b>Accounts used:</b>
+  <%= @metric.Accounts_Used %>
+</p>
+
+<p>
+  <b>Followers count:</b>
+  <%= @metric.Followers_Count %>
+</p>
+
+<p>
+  <b>Time:</b>
+  <%= @metric.Time %>
+</p>
+
+<p>
+  <b>Failures:</b>
+  <%= @metric.Failures %>
+</p>
+
+
+<%= link_to 'Edit', edit_metric_path(@metric) %> |
+<%= link_to 'Back', metrics_path %>
