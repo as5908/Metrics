@@ -1,16 +1,13 @@
 <h1>Listing metrics</h1>
 
-<table>
+<table border="1" width="100%">
   <tr>
-    <th>Status</th>
+    <th>Status Ids</th>
     <th>Text</th>
     <th>Accounts used</th>
     <th>Followers count</th>
-    <th>Time</th>
+    <th>Time Taken(in milliseconds)</th>
     <th>Failures</th>
-    <th></th>
-    <th></th>
-    <th></th>
   </tr>
 
 <% @metrics.each do |metric| %>
@@ -21,13 +18,9 @@
     <td><%= metric.Followers_Count %></td>
     <td><%= metric.Time %></td>
     <td><%= metric.Failures %></td>
-    <td><%= link_to 'Show', metric %></td>
-    <td><%= link_to 'Edit', edit_metric_path(metric) %></td>
-    <td><%= link_to 'Destroy', metric, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Metric', new_metric_path %>
