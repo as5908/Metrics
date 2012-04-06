@@ -2,7 +2,8 @@ class MetricsController < ApplicationController
   # GET /metrics
   # GET /metrics.json
   def index
-    @metrics = Metric.all
+    @metrics = Metric.find(:all, :order => "created_at DESC")
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @metrics }
@@ -10,7 +11,7 @@ class MetricsController < ApplicationController
   end
 		
   def json
-   @metrics = Metric.all
+   @metrics = Metric.find(:all, :order => "created_at DESC")
    #render :text => @users.inspect
    #@json = JSON.generate(@users)
    #render :text => "hi"
