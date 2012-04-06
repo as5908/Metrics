@@ -8,6 +8,14 @@ class MetricsController < ApplicationController
       format.json { render json: @metrics }
     end
   end
+		
+  def json
+   @metrics = Metric.all
+   #render :text => @users.inspect
+   #@json = JSON.generate(@users)
+   #render :text => "hi"
+   render :json=> @metrics.to_json
+  end
 
   # GET /metrics/1
   # GET /metrics/1.json
