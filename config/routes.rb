@@ -1,6 +1,6 @@
 Metrics::Application.routes.draw do
   resources :metrics
-  root :to => "metrics#index"
+  root :to => "metrics#show"
   match '/json' => "metrics#json"
   # The priority is based upon order of creation:
   # first created -> highest priority.
