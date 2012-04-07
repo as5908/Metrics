@@ -21,8 +21,6 @@ class MetricsController < ApplicationController
 
   def index
    @metrics = Metric.find(:all, :order => "created_at DESC")
-   respond_to do |format|
-    format.csv { render :layout => false }
-   end
+
   end
 end
