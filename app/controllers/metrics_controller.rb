@@ -1,4 +1,3 @@
-require 'csv'
 class MetricsController < ApplicationController
 
   # GET /metrics
@@ -21,5 +20,9 @@ class MetricsController < ApplicationController
 
   def index
    @metrics = Metric.find(:all, :order => "created_at DESC")
+    respond_to do |format|
+      format.html # index.html.erb
+      format.csv  # index.csv.erb
+    end
   end
 end
