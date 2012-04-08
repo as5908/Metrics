@@ -1,15 +1,15 @@
-<h1>Listing metrics</h1>
-<%= link_to "Export to CSV", :controller => "metrics", :action => "index", :format => :csv %>
+<h1 align="center">Listing metrics</h1>
+<h3 align="center"><%= link_to "Export to CSV", :controller => "metrics", :action => "index", :format => :csv %></h3><br/>
 <!-- <%= link_to " csv", "/csv",request.parameters.merge({:format => "csv"})%>-->
-<table border="1" width="100%">
+<table border="1" width="100%" class="altrowstable" id="alternatecolor">
   <tr>
-    <th>Status Ids</th>
-    <th>Text</th>
-    <th>Accounts used</th>
-    <th>Followers count</th>
-    <th>Time Taken(in milliseconds)</th>
-    <th>Failures</th>
-    <th>Created at</th>
+    <th><u>Status Ids</u></th>
+    <th><u>Text</u></th>
+    <th><u>Accounts used</u></th>
+    <th><u>Followers count</u></th>
+    <th><u>Time Taken(in millisec)</u></th>
+    <th><u>Failures</u></th>
+    <th><u>Created at</u></th>
   </tr>
 
 <% @metrics.each do |metric| %>
